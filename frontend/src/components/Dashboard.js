@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import Chart from './Chart';  // Ensure this import is correct
+import React, { useState, useEffect } from 'react';
+import Chart from './Chart';
 
 const Dashboard = ({ containerStyle, onClickDashboardItem, dashboardName }) => {
   const [charts, setCharts] = useState([]);
 
-  fetch(`https://quill-backend-api.vercel.app/api/charts/${dashboardName}`)
+  useEffect(() => {
+    // Inside the effect, perform the API call
+    fetch(`https://quill-backend-api.vercel.app/api/charts/${dashboardName}`)
       .then(response => response.json())
       .then(data => {
         // Casting the data and configuration for each chart
@@ -22,6 +24,7 @@ const Dashboard = ({ containerStyle, onClickDashboardItem, dashboardName }) => {
         setCharts(castedCharts);
       })
       .catch(error => console.error('Error fetching charts:', error));
+  }, [dashboardName]); // Ensure the effect runs when dashboardName changes
 
   return (
     <div style={containerStyle}>
