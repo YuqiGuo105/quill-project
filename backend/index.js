@@ -1,9 +1,13 @@
 const express = require('express');
-const cors = require('cors');
-const app = express();
+const { Pool } = require('pg');
+require('dotenv').config(); // If you are using dotenv to manage environment variables
 
+const app = express();
 app.use(express.json());
 
+const cors = require('cors');
+
+// CORS configuration
 const corsOptions = {
   origin: '*', // Allows all origins
   optionsSuccessStatus: 200,
