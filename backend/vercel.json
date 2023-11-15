@@ -9,11 +9,16 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "index.js"
+        "dest": "/"
       }
     ],
     "env": {
-      "DATABASE_URL": "@database_url"
-    },
-    "regions": ["sfo1"] 
-}
+      "PORT": "8000",
+      "DB_USER": "postgres",
+      "DB_HOST": "db.drskhkvlgrdeemligzdd.supabase.co",
+      "DB_NAME": "postgres",
+      "DB_PASSWORD": "DC38J_i?hK*6X3a",
+      "DB_PORT": "5432"
+    }
+  }
+  
