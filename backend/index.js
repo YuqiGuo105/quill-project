@@ -1,18 +1,13 @@
 const express = require('express');
-const { Pool } = require('pg');
-require('dotenv').config(); // If you are using dotenv to manage environment variables
-
+const cors = require('cors');
 const app = express();
+
 app.use(express.json());
 
-const cors = require('cors');
-
-// CORS configuration
 const corsOptions = {
-  origin: 'https://quill-frontend-m9npzbi82-yuqiguo105.vercel.app',
-  optionsSuccessStatus: 200, // For legacy browser support
-  credentials: true, // Set to true if you need to include cookies in the requests sent to the API
-  allowedHeaders: ['X-Requested-With', 'content-type'] // Custom headers you want to allow
+  origin: '*', // Allows all origins
+  optionsSuccessStatus: 200,
+  credentials: true
 };
 
 app.use(cors(corsOptions));
