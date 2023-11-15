@@ -2,7 +2,7 @@
 
 🌐 URL for this project: [https://quill-frontend.vercel.app/](https://quill-frontend.vercel.app/)
 
-I have completed the development of the dashboard component for this project, which includes the integration of various charts using the rechart component.
+I have completed the development of the dashboard component for this project, which includes the integration of various charts using the rechart component. The backend will fetch data from database in supabase.
 
 ### Dashboard Component
 The dashboard is designed to support multiple charts, providing a dynamic and interactive user interface for data visualization.
