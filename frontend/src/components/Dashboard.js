@@ -4,7 +4,7 @@ import Chart from './Chart';  // Ensure this import is correct
 const Dashboard = ({ containerStyle, onClickDashboardItem, dashboardName }) => {
   const [charts, setCharts] = useState([]);
 
-  fetch(`https://quill-backend-nkle7914y-yuqiguo105.vercel.app/api/charts/${dashboardName}`)
+  fetch(`https://quill-backend-api.vercel.app/api/charts/${dashboardName}`)
       .then(response => response.json())
       .then(data => {
         // Casting the data and configuration for each chart
