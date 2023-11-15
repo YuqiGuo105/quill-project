@@ -15,5 +15,5 @@
     "env": {
       "DATABASE_URL": "@database_url"
     },
-    "regions": ["all"]
+    "regions": ["sfo1"] 
 }
