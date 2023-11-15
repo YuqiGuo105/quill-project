@@ -33,6 +33,11 @@ const pool = new Pool({
   port: process.env.DB_PORT || 5432,
 });
 
+// Add a root route handler
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 // Route to fetch dashboard data by name
 app.get('/api/dashboard/:name', async (req, res) => {
   try {
